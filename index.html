@@ -1,23 +1,25 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
     </head>
     <body>
         <center>
         <h1>Checklist</h1>
-        <input type ="text" placeholder = "What would you like to do today?"></input>
+        <input type ="text" placeholder = "What would you like to do today?" id="inpt"></input>
         <br>
         <br>
-        <button class ="btn-info">Add</button>
-        <button class="btn-warning">Delete</button>
+        <button class ="btn-info" onclick="add()">Add</button>
+        <button class="btn-warning" onclick = "del()">Delete</button>
         <h3>Checklist Items</h3>
-        <div>
+        <div id="output">
             
         </div>
         </center>
+        <script src="script.js"></script>
     </body>
 </html>
